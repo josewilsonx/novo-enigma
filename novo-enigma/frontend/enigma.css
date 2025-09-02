@@ -1,0 +1,142 @@
+/* Fonte e base */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #1a1a2e, #0f0f14);
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+/* Container principal */
+.container {
+  max-width: 700px;
+  width: 100%;
+}
+ 
+/* Título */
+h1 {
+  font-size: 2.5rem;
+  color: #c084fc;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #a855f7;
+}
+
+/* Card do enigma */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Enunciado */
+.enunciado {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* Campo de resposta */
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+/* Botões */
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #888;
+  color: #ccc;
+}
+
+/* Área de ações */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Mensagem de feedback */
+.mensagem {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ok { color: #86efac; }
+.bad { color: #fca5a5; }
+
+/* Dica */
+.dica {
+  margin-top: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #a78bfa;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Animação de derrota(pedi ajuda pro chat) */ 
+.overlay-derrota {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #2a0a0a, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 1s ease forwards;
+}
+
+.texto-derrota {
+  font-size: 2rem;
+  color: #fca5a5;
+  text-shadow: 0 0 10px #ff0000;
+  animation: pulsar 1.5s infinite;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulsar {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
