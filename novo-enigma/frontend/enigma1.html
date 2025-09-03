@@ -53,7 +53,7 @@
 
       if (valor === 'calmaria') {
         acertou = true;
-        msg.textContent = '✅ Você acertou! A calmaria reina. 🧘‍♂️';
+        msg.textContent = '✅ Você acertou!';
         msg.className = 'mensagem ok';
         input.disabled = true;
         mostrarAcertoVisual();
@@ -66,7 +66,7 @@
 
       if (tentativas === 0) {
         input.disabled = true;
-        msg.textContent = '💀 Você perdeu. A calmaria escapou...';
+        msg.textContent = '💀 Você perdeu.';
         document.body.classList.add('derrota');
         criarAnimacaoDerrota();
       }

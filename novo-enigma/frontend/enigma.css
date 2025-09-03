@@ -1,4 +1,4 @@
-/* 🌌 Base visual */
+/* Base visual */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -14,13 +14,13 @@ body {
   transition: background 0.5s ease;
 }
 
-/* 📦 Container */
+/* Container */
 .container {
   max-width: 700px;
   width: 100%;
 }
 
-/* 🔐 Título */
+/* Título */
 h1 {
   font-size: 2.5rem;
   color: #c084fc;
@@ -28,7 +28,7 @@ h1 {
   text-shadow: 0 0 10px #a855f7;
 }
 
-/* 🧩 Card */
+/* Card */
 .card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
@@ -36,13 +36,13 @@ h1 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* 📜 Enunciado */
+/* Enunciado */
 .enunciado {
   font-size: 1.3rem;
   margin-bottom: 20px;
 }
 
-/* ✏️ Campo de resposta */
+/* Campo de resposta */
 input {
   padding: 12px;
   border-radius: 10px;
@@ -58,7 +58,7 @@ input::placeholder {
   color: #ccc;
 }
 
-/* 🎛️ Botões */
+/* Botões */
 .btn {
   padding: 12px 20px;
   border-radius: 10px;
@@ -80,7 +80,7 @@ input::placeholder {
   color: #ccc;
 }
 
-/* 🔁 Ações */
+/*  Ações */
 .actions {
   display: flex;
   justify-content: center;
@@ -88,7 +88,7 @@ input::placeholder {
   flex-wrap: wrap;
 }
 
-/* 💬 Mensagem */
+/* Mensagem */
 .mensagem {
   margin-top: 15px;
   font-weight: bold;
@@ -104,7 +104,7 @@ input::placeholder {
   color: #fca5a5;
 }
 
-/* 💡 Dica */
+/* Dica */
 .dica {
   margin-top: 10px;
   font-size: 1rem;
@@ -114,7 +114,7 @@ input::placeholder {
   border-radius: 8px;
 }
 
-/* 💀 Derrota */
+/* Derrota */
 .overlay-derrota {
   position: fixed;
   top: 0;
@@ -136,7 +136,7 @@ input::placeholder {
   animation: pulsar 1.5s infinite;
 }
 
-/* 🎉 Confetes de acerto */
+/* Confetes de acerto */
 .confete {
   position: fixed;
   top: -10px;
@@ -171,7 +171,7 @@ input::placeholder {
   background: linear-gradient(180deg, #fca5a5, #ef4444);
 }
 
-/* 📱 Responsivo */
+/* Responsivo */
 @media (max-width: 600px) {
   input {
     width: 100%;
@@ -186,7 +186,7 @@ input::placeholder {
   }
 }
 
-/* 🎞️ Animações extras */
+/* Animações extras */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

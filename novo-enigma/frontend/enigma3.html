@@ -53,7 +53,7 @@
 
       if (valor === 'concentracao') {
         acertou = true;
-        msg.textContent = '✅ Você acertou! A concentração está em você. 🎯';
+        msg.textContent = '✅ Você acertou!';
         msg.className = 'mensagem ok';
         input.disabled = true;
         mostrarAcertoVisual();
@@ -66,7 +66,7 @@
 
       if (tentativas === 0) {
         input.disabled = true;
-        msg.textContent = '💀 Você perdeu. A concentração se foi...';
+        msg.textContent = '💀 Você perdeu.';
         document.body.classList.add('derrota');
         criarAnimacaoDerrota();
       }
