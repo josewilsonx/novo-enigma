@@ -6,7 +6,7 @@
   <title>ExpoNigma</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="enigma.css" />
-  <link rel="icon" type="image/png" href="../IMG/cadeado abrindo.png">
+  <link rel="icon" type="image/png" href="../IMG/cadeado abrindo.png" />
 </head>
 <body>
   <main class="container">
@@ -53,9 +53,10 @@
 
       if (valor === 'luto') {
         acertou = true;
-        msg.textContent = '✅ Você acertou.';
+        msg.textContent = '✅ Você acertou. O luto é reconhecido. 🕯️';
         msg.className = 'mensagem ok';
         input.disabled = true;
+        mostrarAcertoVisual();
         return;
       }
 
@@ -65,7 +66,7 @@
 
       if (tentativas === 0) {
         input.disabled = true;
-        msg.textContent = '💀 Você perdeu.';
+        msg.textContent = '💀 Você perdeu. O luto permanece em silêncio...';
         document.body.classList.add('derrota');
         criarAnimacaoDerrota();
       }
@@ -80,6 +81,19 @@
       tela.className = 'overlay-derrota';
       tela.innerHTML = `<p class="texto-derrota">☠️ Você perdeu o enigma</p>`;
       document.body.appendChild(tela);
+    }
+
+    function mostrarAcertoVisual() {
+      const quantidade = 30;
+      for (let i = 0; i < quantidade; i++) {
+        const confete = document.createElement('div');
+        confete.className = 'confete';
+        confete.style.left = Math.random() * 100 + '%';
+        confete.style.animationDelay = Math.random() * 0.5 + 's';
+        confete.style.transform = `rotate(${Math.random() * 360}deg)`;
+        document.body.appendChild(confete);
+        setTimeout(() => confete.remove(), 2000);
+      }
     }
   </script>
 </body>
